@@ -1,0 +1,324 @@
+﻿:root {
+    --nav-colour-1: #524cb5;
+    --nav-colour-2: #7470c4;
+    --nav-colour-3: #95C2F4;
+}
+
+header {
+    background-color: var(--nav-colour-1);
+    height: 55px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(255,255,255);
+    z-index: 10;
+    position: sticky;
+}
+
+.nav-container {
+    background-color: var(--nav-colour-1);
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 80px;
+    padding: 0 80px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.nav-logo img {
+    max-width: 40px;
+    max-height: 40px;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    
+}
+
+.nav-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-menu li button,
+.nav-menu li a {
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: rgb(255,255,255);
+    font-size: 16px;
+}
+
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 155px;
+    background-color: var(--nav-colour-1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-menu li:hover .nav-submenu {
+    display: block;
+    background-color: var(--nav-colour-2);
+}
+
+.nav-menu li:hover button,
+.nav-menu li .nav-submenu:hover {
+    display: block;
+}
+
+.nav-menu li .nav-submenu a {
+    color: #ffffff;
+    font-size: 18px;
+    width: 140px;
+    text-decoration: none;
+    display: block;
+    padding: 8px 8px;
+}
+
+.nav-menu li .nav-submenu a:hover {
+    background-color: var(--nav-colour-3);
+    transition: background-color 0.3s ease;
+}
+
+.nav-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-user .user-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-user .user-icon i {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.nav-user .user-dropdown {
+    font-size: 18px;
+    display: none;
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    background-color: var(--nav-colour-2);
+    width: 100px;
+    z-index: 1;
+}
+
+.nav-user .user-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-user .user-dropdown a:hover {
+    background-color: var(--nav-colour-3);
+}
+
+/* Show dropdown on hover */
+.nav-user:hover .user-dropdown {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 45px; /* Adjust header height */
+    }
+
+    .nav-container {
+        height: 45px; /* Adjust nav container height */
+        padding: 0 20px; /* Adjust padding */
+    }
+
+    .nav-logo a {
+        font-size: 16px; /* Adjust logo font size */
+    }
+
+    .nav-menu li button {
+        font-size: 14px; /* Adjust menu button font size */
+    }
+
+    .nav-menu li .nav-submenu {
+        width: 120px; /* Adjust submenu width */
+    }
+
+    .nav-menu li .nav-submenu a {
+        font-size: 14px; /* Adjust submenu link font size */
+    }
+
+    .nav-user .user-dropdown {
+        font-size: 14px; /* Adjust user dropdown font size */
+    }
+}
+
+
+
+
+
+
+
+
+h1 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-align: left;
+	font-size: 40px;
+	color: #524CB5;
+	font-weight: bold;
+}
+h3 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-align: left;
+	font-size: 25px;
+	color: #524CB5;
+	font-weight: bold;
+}
+p{
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-weight: normal;
+}
+
+ body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f0ea;
+        }
+
+.container {
+    padding: 16px;
+    background-color: #f5f0ea;
+        }
+
+  .error {
+            border-color: red;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            opacity: 0;
+            transition: opacity 1.0s ease-in-out;
+        }
+
+        .error-message.show {
+            opacity: 1;
+        }
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+​
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+​
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+​
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+​
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+​
+/* Set a style for the submit button */
+.btn {
+	background-color: #CCFFCC;
+	color: #000000;
+	padding: 15px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+​
+.btn:hover {
+  opacity: 1;
+}
+        input[type=text], input[type=email], input[type=password] {
+            width: 100%;
+            height: 5px;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            outline: none;
+            background: whitesmoke;
+        }
+
+        input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .registerbtn {
+	background-color: #99CCFF;
+	color: black;
+	padding: 16px 20px;
+	margin: 8px;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+	font-weight: normal;
+}
+
+        .registerbtn:hover {
+			color: #000000;
+			background-color: #FFFFCC;
+			font-weight: bold;
+			font-size: 15px;
+}
+
+        a {
+            color: blue;
+        }
+
+        .login {
+            background: #f5f0ea;
+            text-align: center;
+        }
+

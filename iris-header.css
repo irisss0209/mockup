@@ -1,0 +1,265 @@
+﻿/* Responsive Adjustments for mobile  */
+:root {
+  --nav-colour-1: #524cb5;
+  --nav-colour-2: #7470c4;
+  --nav-colour-3: #95C2F4;
+}
+
+header {
+  background-color: var(--nav-colour-1);
+  height: 45px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(255,255,255);
+  z-index: 100;
+  top:0;
+  position: sticky;
+}
+
+.nav-container {
+  background-color: var(--nav-colour-1);
+  height: 60px;
+  box-sizing: border-box;
+  height: 45px; /* Adjust nav container height */
+  padding: 0 20px;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-logo a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.nav-logo img {
+  max-width: 40px;
+  max-height: 40px;
+  display: block;
+
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu li {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-menu li button,
+.nav-menu li a {
+  text-decoration: none;
+  border: none;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: none;
+  color: rgb(255,255,255);
+  font-size: 14px;
+}
+
+.nav-submenu {
+  display: none;
+  position: absolute;
+   left: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 3px;
+  width: fit-content;
+  background-color: var(--nav-colour-1);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-menu li:hover .nav-submenu {
+  display: block;
+  background-color: var(--nav-colour-2);
+}
+
+.nav-menu li:hover button,
+.nav-menu li .nav-submenu:hover {
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.nav-menu li .nav-submenu a {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-decoration: none;
+  display: block;
+  padding: 8px 8px;
+}
+
+.nav-menu li .nav-submenu a {
+  font-size: 12px;
+  width: 90px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-menu li .nav-submenu a:hover {
+  width: 100%;
+  background-color: var(--nav-colour-3);
+  transition: background-color 0.3s ease;
+}
+
+.nav-user {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  gap: 10px;
+}
+
+.nav-user .user-icon {
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
+  cursor: pointer;
+}
+
+.nav-user .user-icon i {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.nav-user .user-dropdown {
+  font-size: 18px;
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: var(--nav-colour-2);
+  width: 100px;
+  z-index: 1;
+}
+
+.nav-user .user-dropdown a {
+  display: block;
+  padding: 8px 12px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.nav-user .user-dropdown a:hover {
+  background-color: var(--nav-colour-3);
+}
+
+/* Show dropdown on hover */
+.nav-user:hover .user-dropdown {
+  display: block;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+}
+/* Responsive Adjustments for tablet: */
+
+@media screen and (min-width: 600px) {
+  header {
+    height: 55px; /* Adjust header height */
+  }
+}
+
+
+/* Responsive Adjustments for desktop: */
+@media screen and (min-width: 768px) {
+  header {
+    height: 55px; /* Adjust header height */
+  }
+
+  .nav-container {
+    height: 60px;/* Adjust nav container height */
+    box-sizing: border-box;
+    padding: 0 80px;
+    height: 45px; /* Adjust padding */
+
+  }
+
+  .nav-logo a {
+    font-size: 10px;/* Adjust logo font size */
+  }
+  .nav-menu li a {
+    font-size: 10px;/* Adjust menu link font size */
+  }
+  .nav-menu li button,
+  .nav-menu li a {
+    font-size: 20px;
+    position: inherit;
+  }
+
+  .nav-menu li button {
+    font-size: 18px;
+      /* Adjust menu button font size */
+  }
+
+  
+  .nav-menu li .nav-submenu a {
+    font-size: 18px;  
+    width: 180px;
+    /* Adjust submenu link font size */
+  }
+
+
+  .nav-user .user-icon i {
+    font-size: 24px;
+    /* Adjust user icon font size */
+  }
+
+  .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+  }
+
+  .nav-logo a {
+      font-size: 24px;
+  }
+
+
+  .nav-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 15px; 
+  }
+
+  .nav-menu li {
+      display: inline-block;
+      position: relative;
+  }
+
+  .nav-menu li button,
+  .nav-menu li a {
+    font-size: 18px;
+  }
+
+  .nav-bar li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  .nav-user .user-dropdown {
+    font-size: 18px;
+  }
+  
+  .nav-menu li .nav-submenu a:hover {
+    width: 180px;
+  }
+
+}

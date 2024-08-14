@@ -1,0 +1,500 @@
+﻿.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: bolder;
+    font-style: normal;
+  }
+  
+:root {
+    --nav-colour-1: #524cb5;
+    --nav-colour-2: #7470c4;
+    --nav-colour-3: #95C2F4;
+}
+
+header {
+    background-color: var(--nav-colour-1);
+    height: 55px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(255,255,255);
+    z-index: 10;
+    position: fixed;
+    width:100vw;
+}
+
+.nav-container {
+    background-color: var(--nav-colour-1);
+    height: 60px;
+    box-sizing: border-box;
+    padding: 0 80px;
+    padding: 0 80px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.nav-logo img {
+    max-width: 40px;
+    max-height: 40px;
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    
+}
+
+.nav-menu li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav-menu li button,
+.nav-menu li a {
+    text-decoration: none;
+    border: none;
+    background: none;
+    color: rgb(255,255,255);
+    font-size: 16px;
+}
+
+.nav-submenu {
+    display: none;
+    position: absolute;
+     left: 0;
+    margin: 0;
+    padding: 0;
+    width: 135px;
+    background-color: var(--nav-colour-1);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.nav-menu li:hover .nav-submenu {
+    display: block;
+    background-color: var(--nav-colour-2);
+}
+
+.nav-menu li:hover button,
+.nav-menu li .nav-submenu:hover {
+    display: block;
+}
+
+.nav-menu li .nav-submenu a {
+    color: #ffffff;
+    font-size: 18px;
+    width: 140px;
+    text-decoration: none;
+    display: block;
+    padding: 8px 8px;
+}
+
+.nav-menu li .nav-submenu a:hover {
+    background-color: var(--nav-colour-3);
+    transition: background-color 0.3s ease;
+}
+
+.nav-user {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-user .user-icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-user .user-icon i {
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.nav-user .user-dropdown {
+    font-size: 18px;
+    display: none;
+    position: absolute;
+  
+    left: 0;
+    background-color: var(--nav-colour-2);
+    width: 100px;
+    z-index: 1;
+}
+
+.nav-user .user-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.nav-user .user-dropdown a:hover {
+    background-color: var(--nav-colour-3);
+}
+
+/* Show dropdown on hover */
+.nav-user:hover .user-dropdown {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        height: 45px; /* Adjust header height */
+    }
+
+    .nav-container {
+        height: 45px; /* Adjust nav container height */
+        padding: 0 20px; /* Adjust padding */
+    }
+
+    .nav-logo a {
+        font-size: 16px; /* Adjust logo font size */
+    }
+
+    .nav-menu li button {
+        font-size: 14px; /* Adjust menu button font size */
+    }
+
+    .nav-menu li .nav-submenu {
+        width: 120px; /* Adjust submenu width */
+    }
+
+    .nav-menu li .nav-submenu a {
+        font-size: 14px; /* Adjust submenu link font size */
+    }
+
+    .nav-user .user-dropdown {
+        font-size: 14px; /* Adjust user dropdown font size */
+    }
+}
+
+body {
+	overflow: auto;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: bolder;
+    font-style: normal;
+  }
+h1 {
+	font-family: Abril Fatface, serif;
+	text-align: center;
+	font-size: 50px;
+	color: #524CB5;
+	font-weight: bold;
+}
+h2 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-align: center;
+	font-size: 34px;
+	color: #264e70;
+	font-weight: bold;
+}
+
+h3 {
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-align: left;
+	font-size: 23px;
+	color: #524CB5;
+	font-weight: normal;
+	font-style: italic;
+}
+h4{
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 24px;
+	font-weight: normal;
+	background-position: left center;
+	background-image: none;
+	background-repeat: no-repeat;
+	color: #264e70;
+}
+h5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #ffebd3;
+	text-align: center;
+	vertical-align: text-top;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+	font-size: 15px;
+	color: #264e70;
+}
+
+.page-head {
+	height: 100vh;
+	width: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: ;
+	background-image: url('wave.svg');
+}
+
+.page-head h1 {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+
+.page-head p {
+    font-size: 60px;
+    margin-top: 0px;;
+}
+
+/* Animation for the heading */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-head h1, .page-head p {
+    animation: fadeInUp 1s ease forwards; /* Apply animation */
+}
+
+.page-body {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: rgb(251, 249, 255);
+    box-shadow: 0px 5px 8px 2px rgba(1, 1, 28, 0.25);
+    overflow-x: hidden;
+    overflow-y:auto;
+}
+
+.flex-container{
+	margin-bottom:80px;
+	flex-direction:column;
+}
+
+
+.recipes1{
+	width:100%;
+	max-width:600px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:20px;
+}
+
+.recipes1 h3{
+	text-align:center;
+}
+
+.recipes1 img {
+    width:100%; 
+    height: auto; 
+}
+
+.recipes1 table {
+    width:100%; 
+
+}
+
+.recipes2{
+	width:100%;
+	max-width:600px;
+	margin-bottom:20px;
+}
+
+.recipes2 h3{
+	text-align:center;
+}
+
+.recipes2 img {
+    width:100%; 
+    height: auto; 
+}
+
+.recipes2 table {
+    width:100%; 
+
+}
+
+.recipes3{
+	width:100%;
+	max-width:600px;
+	margin-bottom:20px;
+
+}
+
+
+.recipes3 h3{
+	text-align:center;
+}
+
+.recipes3 img {
+    width:100%; 
+    height: auto; 
+}
+
+.recipes3 table {
+    width:100%;
+    height:auto;
+
+}
+
+
+
+.recipes4{
+	width:100%;
+	max-width:600px;
+	margin-bottom:20px;
+
+}
+
+.recipes4 h3{
+	text-align:center;
+}
+
+.recipes4 img {
+    width:100%; 
+    height: auto; 
+}
+
+.recipes4 table {
+    width:100%; 
+
+}
+
+
+.recipes5{
+	width:100%;
+	max-width:600px;
+	margin-bottom:20px;
+	
+
+}
+
+.recipes5 h3{
+	text-align:center;
+}
+
+.recipes5 img {
+    width:100%; 
+    height: auto; 
+}
+
+.recipes5 table {
+    width:100%; 
+
+}
+
+.container {
+    margin: 0 auto; 
+    max-width: 1200px;
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    margin-bottom:60px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+[class*="col-"] {
+    padding: 0 20px; 
+    margin-bottom: 10px;
+    max-width: calc(33.33% - 30px); 
+    flex-grow: 1;}
+
+.content {
+    height: 100%;
+    padding: 20px 20px 20px;
+    color: #fff;
+    width: 100%; 
+    max-width: 400px;    
+    margin: 0 auto; 
+    margin-bottom:5px;
+    }
+
+
+
+
+.colour-1 {
+  background-color:#FEA1AC;
+  
+}
+
+.colour-2 {
+  background-color:#FFB0B6;
+}
+
+.colour-3 {
+  background-color:#FFCAB0;
+}
+
+.colour-4 {
+  background-color:#CCCCFF;
+}
+
+.colour-5 {
+  background-color:#FFFFCC;
+}
+
+.colour-6 {
+  background-color:#B7CEFF;
+}
+
+
+
+@media (max-width: 768px) {
+    .content {
+        max-width: 100%; 
+        
+    }
+}
+
+.content h3 {
+  margin-top: 0px;
+  font-weight: 300;
+}
+
+.quiz{
+	background-color:#edf2f7;
+	border:2px solid darkblue;
+	width:1200px;
+}
+
+.question{
+	margin-left:10px;
+}
+
+.options{
+	margin-left:10px;
+}
